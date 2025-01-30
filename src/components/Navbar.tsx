@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Bell, Home, Mail, LogIn } from "lucide-react"
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
+import { syncUser } from "@/actions/user.action";
 
 async function Navbar() {
     const user = await currentUser();
+    if(user) await syncUser(); // Post request
     console.log(user);
   return (
     <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
