@@ -11,8 +11,8 @@ async function Sidebar() {
     if(!authUser) return <UnAuthenticatedSidebar/>
 
     const user = await getUserByClerkId(authUser.id);
-    console.log({user}); 
-    console.log("user loaded")
+    // console.log({user}); 
+    // console.log("user loaded")
     if(!user) return null;
   return (
     <Card className="bg-card border border-zinc-800 rounded-lg shadow-lg">
