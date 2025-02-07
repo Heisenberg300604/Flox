@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { CreatePost } from "@/components/CreatePost";
 import Feed from "@/components/Feed";
 import Navbar from "@/components/Navbar";
