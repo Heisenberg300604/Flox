@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic"; // This line is used to force Vercel to build this page as a static page
 import { CreatePost } from "@/components/CreatePost";
 import Feed from "@/components/Feed";
 import Navbar from "@/components/Navbar";
