@@ -44,9 +44,11 @@ import { Heart, MessageCircle, Repeat } from "lucide-react"
 import { currentUser } from "@clerk/nextjs/server"
 import PostCard from "./PostCard"
 import { getPosts } from "@/actions/post.action"
+import { getDbUserId } from "@/actions/user.action";
 
 
 export default async function Feed() {
+  const dbUserId = await getDbUserId();
 
   const user = await currentUser();
   const posts =await getPosts();
@@ -54,7 +56,7 @@ export default async function Feed() {
   return (
     <div className="space-y-4">
       {posts.map((post) => (
-        <PostCard key={post.id} post ={post} />
+        <PostCard key={post.id} post ={post} dbUserId={dbUserId} />
       ))}
     </div>
   )
