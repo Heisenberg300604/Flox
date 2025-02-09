@@ -21,12 +21,11 @@ async function Navbar() {
               <Button variant="ghost" size="icon">
                 <Home className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon">
-                <Bell className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Mail className="h-5 w-5" />
-              </Button>
+              <Link href="/notifications">
+                <Button variant="ghost" size="icon">
+                  <Bell className="h-5 w-5" />
+                </Button>
+              </Link>
             </>
           )}
           <SignedOut>
