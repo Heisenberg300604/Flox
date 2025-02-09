@@ -9,6 +9,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { ImageIcon, Loader2, Send } from "lucide-react"
 import { createPost } from "@/actions/post.action"
 import toast from "react-hot-toast"
+import ImageUpload from "./ImageUpload"
 // import ImageUpload from "./ImageUpload"
 
 export function CreatePost() {
@@ -58,9 +59,7 @@ export function CreatePost() {
             />
           </div>
 
-          {/* TO DO - Show Image preview */}
-
-          {/* {(showImageUpload || imageUrl) && (
+          {(showImageUpload || imageUrl) && (
             <div className="rounded-lg border p-4">
               <ImageUpload
                 endpoint="postImage"
@@ -71,7 +70,7 @@ export function CreatePost() {
                 }}
               />
             </div>
-          )} */}
+          )}
 
           <div className="flex items-center justify-between border-t pt-4">
             <div className="flex space-x-2">
